@@ -1,0 +1,5 @@
+#!/Users/new/Desktop/PCM_LBL_or/source/path/to/venv/bin/python3.12
+
+from f90nml import cli
+
+cli.parse()

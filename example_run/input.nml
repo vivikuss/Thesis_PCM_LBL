@@ -1,0 +1,57 @@
+&gen_params_nml
+    nt = 500
+    cp_heat = 800
+    rho_h_cp = 50000000.0
+    delta_t = 3000000.0
+    calc_sigma = .true., .true., .true., .true.
+    kappa_gray = 0.0
+    add_update_tsurf = .true.
+    relax_adiabat = .true.
+    adjust_asr = .true.
+    adjust_adia = .false.
+/
+
+&temperature_k_grid_nml
+    dtlay = 30.0
+/
+
+&longwave_nml
+    nu_lw1 = 1.0
+    nu_lw2 = 2500.0
+/
+
+&shortwave_nml
+    nu_sw1 = 1.0
+    nu_sw2 = 50000.0
+    asurf = 0.3
+    fstel0 = 686.6
+    cosa0 = 0.666
+    rayleigh_top = .true.
+/
+
+&atmos_structure_nml
+    ps = 2e6
+    ts = 270.0
+    ptop = 1.0
+    tstra = 150.0
+    grav = 23.7
+    rh = 0.8
+    condense_co2 = .false.
+    use_atmos_profile = .true.
+    pv_atmos_profile = 1000000.0
+    hybrid = .true.
+    tanh_bool = .false.
+    weight_factor = 0.5
+/
+
+&composition_nml
+    ngas_check = 4
+    gas_name_max = 'He_', 'CO2', 'CH4', 'H2O'
+    gas_molarconc_max = 0.99, 0.01, 0.0, -1.0
+/
+
+&crosssec_nml
+    deltanu_trunc = 500.0, 25.0, 25.0, 25.0
+    hitemp = .false.
+    sref_cutoff = 1e-30
+/
