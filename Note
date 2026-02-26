@@ -1,0 +1,3 @@
+This version of PCM_LBL set to the adjusted ASR scheme, does lead to contradicting 
+values in ISR.out and ISRnu.out due to incorrect updating. In order to get the correct ISR, integrating over the ISRnu.out 
+values is necessary.
